@@ -45,7 +45,7 @@ Usage
 
 To apply a MMTweenAnimation, you must configure it by:
 
-```
+```objc
 @property (nonatomic, copy)   MMTweenAnimationBlock  animationBlock;
 
 @property (nonatomic, assign) double fromValue;
@@ -57,7 +57,7 @@ To apply a MMTweenAnimation, you must configure it by:
 ```
 
 for example:
-```
+```objc
 MMTweenAnimation *anim = [MMTweenAnimation animation];
 anim.functionType   = MMTweenFunctionBounce;
 anim.easingType     = MMTweenEasingOut;
