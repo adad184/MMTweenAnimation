@@ -1,2 +1,116 @@
-# MMTweenAnimation
+MMTweenAnimation
+=============
+[![Total views](https://sourcegraph.com/api/repos/github.com/adad184/MMTweenAnimation/.counters/views.png)](https://sourcegraph.com/github.com/adad184/MMTweenAnimation)
+[![Views in the last 24 hours](https://sourcegraph.com/api/repos/github.com/adad184/MMTweenAnimation/.counters/views-24h.png)](https://sourcegraph.com/github.com/adad184/MMTweenAnimation)
+
+![demo][demo]
 A extension of POP(from facebook) custom animation. Inspired by tweaner(https://code.google.com/p/tweaner), MMTweanerAnimation provide 10 types of custom animation while using POP.
+
+
+Installation
+============
+
+The preferred way of installation is via [CocoaPods](http://cocoapods.org). Just add
+
+```ruby
+pod 'MMTweenAnimation'
+```
+
+and run `pod install`. It will install the most recent version of MMTweenAnimation.
+
+If you would like to use the latest code of MMTweenAnimation use:
+
+```ruby
+pod 'MMTweenAnimation', :head
+```
+
+
+Type
+===============
+There are 10 concrete animation types: 
+
+| Back      | Bounce    | Circ      | Cubic     | Elastic   |
+|:---------:|:---------:|:---------:|:---------:|:---------:|
+| ![][1]    | ![][2]    | ![][3]    | ![][4]    | ![][5]    |
+
+
+| Expo      | Quad      | Quart     | Quint     | Sine      |
+|:---------:|:---------:|:---------:|:---------:|:---------:|
+| ![][6]    | ![][7]    | ![][8]    | ![][9]    | ![][10]   |
+
+
+Usage
+===============
+
+To apply a MMTweenAnimation, you must configure it by:
+
+```
+@property (nonatomic, copy)   MMTweenAnimationBlock  animationBlock;
+
+@property (nonatomic, assign) double fromValue;
+@property (nonatomic, assign) double toValue;
+@property (nonatomic, assign) double duration;  //default: 0.3
+
+@property (nonatomic, assign) MMTweenFunctionType functionType; //default: MMTweenFunctionBounce
+@property (nonatomic, assign) MMTweenEasingType   easingType;   //default: MMTweenEasingOut
+```
+
+for example:
+```
+MMTweenAnimation *anim = [MMTweenAnimation animation];
+anim.functionType   = MMTweenFunctionBounce;
+anim.easingType     = MMTweenEasingOut;
+anim.duration       = 2.0f;
+anim.fromValue      = 0;
+anim.toValue        = 200;
+anim.animationBlock = ^(double c,double d,double v,id target,MMTweenAnimation *animation)
+{
+    //c: current time, from the beginning of animation
+    //d: duration, always bigger than c
+    //v: value, after the change at current time
+
+    UIView *t = (UIView*)target;
+    t.center = CGPointMake(t.x, v);
+};
+
+[targetView pop_addAnimation:anim forKey:@"center.y"];
+
+```
+
+Changelog
+===============
+v1.0  you can custom or simply use it by
+
+```objc
+
+@interface MMTweenAnimation : POPCustomAnimation
+
+@property (nonatomic, copy)   MMTweenAnimationBlock  animationBlock;
+
+@property (nonatomic, assign) double fromValue;
+@property (nonatomic, assign) double toValue;
+@property (nonatomic, assign) double duration;
+
+@property (nonatomic, assign) MMTweenFunctionType functionType;
+@property (nonatomic, assign) MMTweenEasingType   easingType;
+
++ (instancetype)animation;
+
+@end
+```
+
+
+
+[demo]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/demo.gif
+[1]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/1.gif
+[2]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/2.gif
+[3]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/3.gif
+[4]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/4.gif
+[5]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/5.gif
+[6]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/6.gif
+[7]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/7.gif
+[8]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/8.gif
+[9]:  https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/9.gif
+[10]: https://raw.githubusercontent.com/adad184/MMTweenAnimation/master/Images/10.gif
+
+
