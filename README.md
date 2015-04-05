@@ -4,7 +4,8 @@ MMTweenAnimation
 [![Views in the last 24 hours](https://sourcegraph.com/api/repos/github.com/adad184/MMTweenAnimation/.counters/views-24h.png)](https://sourcegraph.com/github.com/adad184/MMTweenAnimation)
 
 ![demo][demo]
-A extension of POP(from facebook) custom animation. Inspired by tweaner(https://code.google.com/p/tweaner), MMTweanerAnimation provide 10 types of custom animation while using POP.
+
+MMTweenAnimation is a extension of POP(from facebook) custom animation. Inspired by tweaner(https://code.google.com/p/tweaner), MMTweanerAnimation provide 10 types of custom animation while using POP.
 
 
 Installation
