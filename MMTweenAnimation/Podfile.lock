@@ -1,0 +1,13 @@
+PODS:
+  - Masonry (HEAD based on 0.6.1)
+  - pop (HEAD based on 1.0.7)
+
+DEPENDENCIES:
+  - Masonry (HEAD)
+  - pop (HEAD)
+
+SPEC CHECKSUMS:
+  Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+
+COCOAPODS: 0.36.3

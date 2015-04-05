@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C561E99167E6AC4A80AA55E3 /* libPods-MMTweenAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 229873FC63E85087426051E7 /* libPods-MMTweenAnimation.a */; };
+		EDB8A10F1AD1964B00498154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A10E1AD1964B00498154 /* main.m */; };
+		EDB8A1121AD1964B00498154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1111AD1964B00498154 /* AppDelegate.m */; };
+		EDB8A1151AD1964B00498154 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1141AD1964B00498154 /* ViewController.m */; };
+		EDB8A11A1AD1964B00498154 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB8A1191AD1964B00498154 /* Images.xcassets */; };
+		EDB8A1291AD1964B00498154 /* MMTweenAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1281AD1964B00498154 /* MMTweenAnimationTests.m */; };
+		EDB8A1371AD1992900498154 /* MMTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1341AD1992900498154 /* MMTweenAnimation.m */; };
+		EDB8A1381AD1992900498154 /* MMTweenFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1361AD1992900498154 /* MMTweenFunction.m */; };
+		EDB8A1411AD1993B00498154 /* CGPointExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A13A1AD1993B00498154 /* CGPointExtension.m */; };
+		EDB8A1421AD1993B00498154 /* MMAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A13C1AD1993B00498154 /* MMAnimationController.m */; };
+		EDB8A1431AD1993B00498154 /* MMFunctionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A13E1AD1993B00498154 /* MMFunctionController.m */; };
+		EDB8A1441AD1993B00498154 /* MMPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1401AD1993B00498154 /* MMPaintView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDB8A1231AD1964B00498154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB8A1011AD1964B00498154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB8A1081AD1964B00498154;
+			remoteInfo = MMTweenAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		229873FC63E85087426051E7 /* libPods-MMTweenAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMTweenAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4121E87E4BD7A021719BCCD4 /* Pods-MMTweenAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTweenAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMTweenAnimation/Pods-MMTweenAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		7ACB5604A779BD7C901DBCDC /* Pods-MMTweenAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTweenAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMTweenAnimation/Pods-MMTweenAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		EDB8A1091AD1964B00498154 /* MMTweenAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMTweenAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB8A10D1AD1964B00498154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDB8A10E1AD1964B00498154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EDB8A1101AD1964B00498154 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EDB8A1111AD1964B00498154 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EDB8A1131AD1964B00498154 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EDB8A1141AD1964B00498154 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EDB8A1191AD1964B00498154 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EDB8A1221AD1964B00498154 /* MMTweenAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMTweenAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB8A1271AD1964B00498154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDB8A1281AD1964B00498154 /* MMTweenAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTweenAnimationTests.m; sourceTree = "<group>"; };
+		EDB8A1331AD1992900498154 /* MMTweenAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTweenAnimation.h; path = ../Classes/MMTweenAnimation.h; sourceTree = "<group>"; };
+		EDB8A1341AD1992900498154 /* MMTweenAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTweenAnimation.m; path = ../Classes/MMTweenAnimation.m; sourceTree = "<group>"; };
+		EDB8A1351AD1992900498154 /* MMTweenFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTweenFunction.h; path = ../Classes/MMTweenFunction.h; sourceTree = "<group>"; };
+		EDB8A1361AD1992900498154 /* MMTweenFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTweenFunction.m; path = ../Classes/MMTweenFunction.m; sourceTree = "<group>"; };
+		EDB8A1391AD1993B00498154 /* CGPointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointExtension.h; sourceTree = "<group>"; };
+		EDB8A13A1AD1993B00498154 /* CGPointExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointExtension.m; sourceTree = "<group>"; };
+		EDB8A13B1AD1993B00498154 /* MMAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAnimationController.h; sourceTree = "<group>"; };
+		EDB8A13C1AD1993B00498154 /* MMAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMAnimationController.m; sourceTree = "<group>"; };
+		EDB8A13D1AD1993B00498154 /* MMFunctionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMFunctionController.h; sourceTree = "<group>"; };
+		EDB8A13E1AD1993B00498154 /* MMFunctionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMFunctionController.m; sourceTree = "<group>"; };
+		EDB8A13F1AD1993B00498154 /* MMPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPaintView.h; sourceTree = "<group>"; };
+		EDB8A1401AD1993B00498154 /* MMPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPaintView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDB8A1061AD1964B00498154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C561E99167E6AC4A80AA55E3 /* libPods-MMTweenAnimation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB8A11F1AD1964B00498154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06EF24AE774DAABB7482967C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4121E87E4BD7A021719BCCD4 /* Pods-MMTweenAnimation.debug.xcconfig */,
+				7ACB5604A779BD7C901DBCDC /* Pods-MMTweenAnimation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDB8A1001AD1964B00498154 = {
+			isa = PBXGroup;
+			children = (
+				EDB8A1321AD1991500498154 /* Classes */,
+				EDB8A10B1AD1964B00498154 /* MMTweenAnimation */,
+				EDB8A1251AD1964B00498154 /* MMTweenAnimationTests */,
+				EDB8A10A1AD1964B00498154 /* Products */,
+				06EF24AE774DAABB7482967C /* Pods */,
+				FBBC2A3FAE6A3572EE315858 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EDB8A10A1AD1964B00498154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDB8A1091AD1964B00498154 /* MMTweenAnimation.app */,
+				EDB8A1221AD1964B00498154 /* MMTweenAnimationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDB8A10B1AD1964B00498154 /* MMTweenAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				EDB8A1391AD1993B00498154 /* CGPointExtension.h */,
+				EDB8A13A1AD1993B00498154 /* CGPointExtension.m */,
+				EDB8A13B1AD1993B00498154 /* MMAnimationController.h */,
+				EDB8A13C1AD1993B00498154 /* MMAnimationController.m */,
+				EDB8A13D1AD1993B00498154 /* MMFunctionController.h */,
+				EDB8A13E1AD1993B00498154 /* MMFunctionController.m */,
+				EDB8A13F1AD1993B00498154 /* MMPaintView.h */,
+				EDB8A1401AD1993B00498154 /* MMPaintView.m */,
+				EDB8A1101AD1964B00498154 /* AppDelegate.h */,
+				EDB8A1111AD1964B00498154 /* AppDelegate.m */,
+				EDB8A1131AD1964B00498154 /* ViewController.h */,
+				EDB8A1141AD1964B00498154 /* ViewController.m */,
+				EDB8A1191AD1964B00498154 /* Images.xcassets */,
+				EDB8A10C1AD1964B00498154 /* Supporting Files */,
+			);
+			path = MMTweenAnimation;
+			sourceTree = "<group>";
+		};
+		EDB8A10C1AD1964B00498154 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDB8A10D1AD1964B00498154 /* Info.plist */,
+				EDB8A10E1AD1964B00498154 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDB8A1251AD1964B00498154 /* MMTweenAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDB8A1281AD1964B00498154 /* MMTweenAnimationTests.m */,
+				EDB8A1261AD1964B00498154 /* Supporting Files */,
+			);
+			path = MMTweenAnimationTests;
+			sourceTree = "<group>";
+		};
+		EDB8A1261AD1964B00498154 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDB8A1271AD1964B00498154 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDB8A1321AD1991500498154 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EDB8A1331AD1992900498154 /* MMTweenAnimation.h */,
+				EDB8A1341AD1992900498154 /* MMTweenAnimation.m */,
+				EDB8A1351AD1992900498154 /* MMTweenFunction.h */,
+				EDB8A1361AD1992900498154 /* MMTweenFunction.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		FBBC2A3FAE6A3572EE315858 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				229873FC63E85087426051E7 /* libPods-MMTweenAnimation.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDB8A1081AD1964B00498154 /* MMTweenAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB8A12C1AD1964B00498154 /* Build configuration list for PBXNativeTarget "MMTweenAnimation" */;
+			buildPhases = (
+				5976C6836A69826B3F56A634 /* Check Pods Manifest.lock */,
+				EDB8A1051AD1964B00498154 /* Sources */,
+				EDB8A1061AD1964B00498154 /* Frameworks */,
+				EDB8A1071AD1964B00498154 /* Resources */,
+				EA7F0C6B7E730CDD3C979C7D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMTweenAnimation;
+			productName = MMTweenAnimation;
+			productReference = EDB8A1091AD1964B00498154 /* MMTweenAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDB8A1211AD1964B00498154 /* MMTweenAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB8A12F1AD1964B00498154 /* Build configuration list for PBXNativeTarget "MMTweenAnimationTests" */;
+			buildPhases = (
+				EDB8A11E1AD1964B00498154 /* Sources */,
+				EDB8A11F1AD1964B00498154 /* Frameworks */,
+				EDB8A1201AD1964B00498154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDB8A1241AD1964B00498154 /* PBXTargetDependency */,
+			);
+			name = MMTweenAnimationTests;
+			productName = MMTweenAnimationTests;
+			productReference = EDB8A1221AD1964B00498154 /* MMTweenAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDB8A1011AD1964B00498154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = LJC;
+				TargetAttributes = {
+					EDB8A1081AD1964B00498154 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EDB8A1211AD1964B00498154 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = EDB8A1081AD1964B00498154;
+					};
+				};
+			};
+			buildConfigurationList = EDB8A1041AD1964B00498154 /* Build configuration list for PBXProject "MMTweenAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDB8A1001AD1964B00498154;
+			productRefGroup = EDB8A10A1AD1964B00498154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDB8A1081AD1964B00498154 /* MMTweenAnimation */,
+				EDB8A1211AD1964B00498154 /* MMTweenAnimationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDB8A1071AD1964B00498154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB8A11A1AD1964B00498154 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB8A1201AD1964B00498154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5976C6836A69826B3F56A634 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA7F0C6B7E730CDD3C979C7D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMTweenAnimation/Pods-MMTweenAnimation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDB8A1051AD1964B00498154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB8A1441AD1993B00498154 /* MMPaintView.m in Sources */,
+				EDB8A1411AD1993B00498154 /* CGPointExtension.m in Sources */,
+				EDB8A1151AD1964B00498154 /* ViewController.m in Sources */,
+				EDB8A1421AD1993B00498154 /* MMAnimationController.m in Sources */,
+				EDB8A1121AD1964B00498154 /* AppDelegate.m in Sources */,
+				EDB8A10F1AD1964B00498154 /* main.m in Sources */,
+				EDB8A1431AD1993B00498154 /* MMFunctionController.m in Sources */,
+				EDB8A1381AD1992900498154 /* MMTweenFunction.m in Sources */,
+				EDB8A1371AD1992900498154 /* MMTweenAnimation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB8A11E1AD1964B00498154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB8A1291AD1964B00498154 /* MMTweenAnimationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDB8A1241AD1964B00498154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB8A1081AD1964B00498154 /* MMTweenAnimation */;
+			targetProxy = EDB8A1231AD1964B00498154 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDB8A12A1AD1964B00498154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDB8A12B1AD1964B00498154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDB8A12D1AD1964B00498154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4121E87E4BD7A021719BCCD4 /* Pods-MMTweenAnimation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MMTweenAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EDB8A12E1AD1964B00498154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ACB5604A779BD7C901DBCDC /* Pods-MMTweenAnimation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MMTweenAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EDB8A1301AD1964B00498154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MMTweenAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MMTweenAnimation.app/MMTweenAnimation";
+			};
+			name = Debug;
+		};
+		EDB8A1311AD1964B00498154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MMTweenAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MMTweenAnimation.app/MMTweenAnimation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDB8A1041AD1964B00498154 /* Build configuration list for PBXProject "MMTweenAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB8A12A1AD1964B00498154 /* Debug */,
+				EDB8A12B1AD1964B00498154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB8A12C1AD1964B00498154 /* Build configuration list for PBXNativeTarget "MMTweenAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB8A12D1AD1964B00498154 /* Debug */,
+				EDB8A12E1AD1964B00498154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB8A12F1AD1964B00498154 /* Build configuration list for PBXNativeTarget "MMTweenAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB8A1301AD1964B00498154 /* Debug */,
+				EDB8A1311AD1964B00498154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDB8A1011AD1964B00498154 /* Project object */;
+}

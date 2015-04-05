@@ -1,6 +1,6 @@
 //
 //  MMAnimationController.m
-//  MMTweanerAnimation
+//  MMTweenAnimation
 //
 //  Created by Ralph Li on 4/4/15.
 //  Copyright (c) 2015 LJC. All rights reserved.
@@ -9,14 +9,14 @@
 #import "MMAnimationController.h"
 #import "MMPaintView.h"
 #import <Masonry/Masonry.h>
-#import "MMTweanerAnimation.h"
+#import "MMTweenAnimation.h"
 
 @interface MMAnimationController ()
 
 @property (nonatomic, strong) MMPaintView *paintView;
 @property (nonatomic, strong) UIView *dummy;
 @property (nonatomic, strong) UIView *ball;
-@property (nonatomic, strong) MMTweanerAnimation *anim;
+@property (nonatomic, strong) MMTweenAnimation *anim;
 
 @end
 
@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = [NSString stringWithFormat:@"%@ - %@",[MMTweanerFunction sharedInstance].functionNames[self.functionType],[MMTweanerFunction sharedInstance].easingNames[self.easingType]];
+    self.title = [NSString stringWithFormat:@"%@ - %@",[MMTweenFunction sharedInstance].functionNames[self.functionType],[MMTweenFunction sharedInstance].easingNames[self.easingType]];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -59,13 +59,13 @@
     
     __weak __typeof(&*self)ws = self;
     
-    self.anim = [MMTweanerAnimation animation];
+    self.anim = [MMTweenAnimation animation];
     self.anim.functionType   = self.functionType;
     self.anim.easingType     = self.easingType;
     self.anim.duration       = 2.0f;
     self.anim.fromValue      = self.dummy.center.y;
     self.anim.toValue        = self.anim.fromValue + 200;
-    self.anim.animationBlock = ^(double c,double d,double v,id target,MMTweanerAnimation *animation)
+    self.anim.animationBlock = ^(double c,double d,double v,id target,MMTweenAnimation *animation)
     {
         ws.dummy.center = CGPointMake(ws.dummy.center.x, v);
         ws.ball.center = CGPointMake(50+(CGRectGetWidth([UIScreen mainScreen].bounds)-150)*(c/d), v);

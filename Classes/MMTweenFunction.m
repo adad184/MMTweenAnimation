@@ -1,16 +1,16 @@
 //
-//  MMTweanerFunction.m
-//  MMTweanerAnimation
+//  MMTweenFunction.m
+//  MMTweenAnimation
 //
 //  Created by Ralph Li on 4/4/15.
 //  Copyright (c) 2015 LJC. All rights reserved.
 //
 
-#import "MMTweanerFunction.h"
+#import "MMTweenFunction.h"
 
-static MMTweanerFunction *sharedFunction = nil;
+static MMTweenFunction *sharedFunction = nil;
 
-@interface MMTweanerFunction ()
+@interface MMTweenFunction ()
 
 @property (nonatomic, strong) NSArray *functionTable;
 @property (nonatomic, strong) NSArray *functionNames;
@@ -18,10 +18,10 @@ static MMTweanerFunction *sharedFunction = nil;
 
 @end
 
-@implementation MMTweanerFunction
+@implementation MMTweenFunction
 
 + (void)load {
-    MMTweanerFunction *func = [MMTweanerFunction sharedInstance];
+    MMTweenFunction *func = [MMTweenFunction sharedInstance];
     
     [func setupBlocks];
 }
@@ -36,27 +36,27 @@ static MMTweanerFunction *sharedFunction = nil;
     return sharedFunction;
 }
 
-+ (MMTweanerFunctionBlock)blockWithFunctionType:(MMTweanerFunctionType)functionType easingType:(MMTweanerEasingType)easingType {
++ (MMTweenFunctionBlock)blockWithFunctionType:(MMTweenFunctionType)functionType easingType:(MMTweenEasingType)easingType {
     return nil;
 }
 
 - (void)setupBlocks {
-    //MMTweanerFunctionBack
-    MMTweanerFunctionBlock blockBackIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionBack
+    MMTweenFunctionBlock blockBackIn = ^(double t, double b, double c, double d)
     {
         double s = 1.70158;
         t /= d;
         return c * t * t * ((s + 1) * t - s) + b;
     };
     
-    MMTweanerFunctionBlock blockBackOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockBackOut = ^(double t, double b, double c, double d)
     {
         double s = 1.70158;
         t = t / d - 1;
         return c * (t * t * ((s + 1) * t + s) + 1) + b;
     };
     
-    MMTweanerFunctionBlock blockBackInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockBackInOut = ^(double t, double b, double c, double d)
     {
         double s = 1.70158;
         double k = 1.525;
@@ -71,8 +71,8 @@ static MMTweanerFunction *sharedFunction = nil;
         }
     };
     
-    //MMTweanerFunctionBounce
-    MMTweanerFunctionBlock blockBounceOut = ^(double t, double b, double c, double d)
+    //MMTweenFunctionBounce
+    MMTweenFunctionBlock blockBounceOut = ^(double t, double b, double c, double d)
     {
         double k = 2.75;
         if ((t /= d) < (1 / k)) {
@@ -92,12 +92,12 @@ static MMTweanerFunction *sharedFunction = nil;
         }
     };
     
-    MMTweanerFunctionBlock blockBounceIn = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockBounceIn = ^(double t, double b, double c, double d)
     {
         return c - blockBounceOut(d - t, 0, c, d) + b;
     };
     
-    MMTweanerFunctionBlock blockBounceInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockBounceInOut = ^(double t, double b, double c, double d)
     {
         if (t < d * .5) {
             return blockBounceIn(t * 2, 0, c, d) * .5 + b;
@@ -107,20 +107,20 @@ static MMTweanerFunction *sharedFunction = nil;
         }
     };
     
-    //MMTweanerFunctionCirc
-    MMTweanerFunctionBlock blockCircIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionCirc
+    MMTweenFunctionBlock blockCircIn = ^(double t, double b, double c, double d)
     {
         t /= d;
         return -c * (sqrt(1 - t * t) - 1) + b;
     };
     
-    MMTweanerFunctionBlock blockCircOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockCircOut = ^(double t, double b, double c, double d)
     {
         t = t / d - 1;
         return c * sqrt(1 - t * t) + b;
     };
     
-    MMTweanerFunctionBlock blockCircInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockCircInOut = ^(double t, double b, double c, double d)
     {
         t /= (d/2);
         if (t <= 1) {
@@ -133,20 +133,20 @@ static MMTweanerFunction *sharedFunction = nil;
     };
     
     
-    //MMTweanerFunctionCubic
-    MMTweanerFunctionBlock blockCubicIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionCubic
+    MMTweenFunctionBlock blockCubicIn = ^(double t, double b, double c, double d)
     {
         t /= d;
         return c * t * t * t + b;
     };
     
-    MMTweanerFunctionBlock blockCubicOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockCubicOut = ^(double t, double b, double c, double d)
     {
         t = t / d - 1;
         return c * (t * t * t + 1) + b;
     };
     
-    MMTweanerFunctionBlock blockCubicInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockCubicInOut = ^(double t, double b, double c, double d)
     {
         t /= d / 2;
         if (t < 1) {
@@ -158,8 +158,8 @@ static MMTweanerFunction *sharedFunction = nil;
     };
     
     
-    //MMTweanerFunctionElastic
-    MMTweanerFunctionBlock blockElasticIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionElastic
+    MMTweenFunctionBlock blockElasticIn = ^(double t, double b, double c, double d)
     {
         double s = 1.70158;
         double p = 0;
@@ -183,7 +183,7 @@ static MMTweanerFunction *sharedFunction = nil;
         return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * 3.1419) / p)) + b;
     };
     
-    MMTweanerFunctionBlock blockElasticOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockElasticOut = ^(double t, double b, double c, double d)
     {
         double s = 1.70158;
         double p = 0;
@@ -206,7 +206,7 @@ static MMTweanerFunction *sharedFunction = nil;
         return a * pow(2, -10 * t) * sin((t * d - s) * (2 * 3.1419) / p) + c + b;
     };
     
-    MMTweanerFunctionBlock blockElasticInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockElasticInOut = ^(double t, double b, double c, double d)
     {
         double s = 1.70158;
         double p = 0;
@@ -235,18 +235,18 @@ static MMTweanerFunction *sharedFunction = nil;
     };
     
     
-    //MMTweanerFunctionExpo
-    MMTweanerFunctionBlock blockExpoIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionExpo
+    MMTweenFunctionBlock blockExpoIn = ^(double t, double b, double c, double d)
     {
         return (t == 0) ? b : c *pow(2, 10 * (t / d - 1)) + b;
     };
     
-    MMTweanerFunctionBlock blockExpoOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockExpoOut = ^(double t, double b, double c, double d)
     {
         return (t == d) ? b + c : c * (-pow(2, -10 * t / d) + 1) + b;
     };
     
-    MMTweanerFunctionBlock blockExpoInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockExpoInOut = ^(double t, double b, double c, double d)
     {
         if (t == 0) {
             return b;
@@ -266,20 +266,20 @@ static MMTweanerFunction *sharedFunction = nil;
     };
     
     
-    //MMTweanerFunctionQuad
-    MMTweanerFunctionBlock blockQuadIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionQuad
+    MMTweenFunctionBlock blockQuadIn = ^(double t, double b, double c, double d)
     {
         t /= d;
         return c * t * t + b;
     };
     
-    MMTweanerFunctionBlock blockQuadOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockQuadOut = ^(double t, double b, double c, double d)
     {
         t /= d;
         return -c * t * (t - 2) + b;
     };
     
-    MMTweanerFunctionBlock blockQuadInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockQuadInOut = ^(double t, double b, double c, double d)
     {
         t /= d / 2;
         if (t < 1) {
@@ -290,20 +290,20 @@ static MMTweanerFunction *sharedFunction = nil;
     };
     
     
-    //MMTweanerFunctionQuart
-    MMTweanerFunctionBlock blockQuartIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionQuart
+    MMTweenFunctionBlock blockQuartIn = ^(double t, double b, double c, double d)
     {
         t /= d;
         return c * t * t * t * t + b;
     };
     
-    MMTweanerFunctionBlock blockQuartOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockQuartOut = ^(double t, double b, double c, double d)
     {
         t = t / d - 1;
         return -c * (t * t * t * t - 1) + b;
     };
     
-    MMTweanerFunctionBlock blockQuartInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockQuartInOut = ^(double t, double b, double c, double d)
     {
         t /= d / 2;
         if (t < 1) {
@@ -315,20 +315,20 @@ static MMTweanerFunction *sharedFunction = nil;
     };
     
     
-    //MMTweanerFunctionQuint
-    MMTweanerFunctionBlock blockQuintIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionQuint
+    MMTweenFunctionBlock blockQuintIn = ^(double t, double b, double c, double d)
     {
         t /= d;
         return c * t * t * t * t * t + b;
     };
     
-    MMTweanerFunctionBlock blockQuintOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockQuintOut = ^(double t, double b, double c, double d)
     {
         t = t / d - 1;
         return c * (t * t * t * t * t + 1) + b;
     };
     
-    MMTweanerFunctionBlock blockQuintInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockQuintInOut = ^(double t, double b, double c, double d)
     {
         t /= d / 2;
         if (t < 1) {
@@ -339,18 +339,18 @@ static MMTweanerFunction *sharedFunction = nil;
     };
     
     
-    //MMTweanerFunctionSine
-    MMTweanerFunctionBlock blockSineIn = ^(double t, double b, double c, double d)
+    //MMTweenFunctionSine
+    MMTweenFunctionBlock blockSineIn = ^(double t, double b, double c, double d)
     {
         return -c *cos(t / d * (M_PI / 2)) + c + b;
     };
     
-    MMTweanerFunctionBlock blockSineOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockSineOut = ^(double t, double b, double c, double d)
     {
         return c * sin(t / d * (M_PI / 2)) + b;
     };
     
-    MMTweanerFunctionBlock blockSineInOut = ^(double t, double b, double c, double d)
+    MMTweenFunctionBlock blockSineInOut = ^(double t, double b, double c, double d)
     {
         return -c / 2 * (cos(M_PI * t / d) - 1) + b;
     };
@@ -401,14 +401,14 @@ static MMTweanerFunction *sharedFunction = nil;
                          @"EaseOut",
                          @"EaseInOut"];
     
-//    [MMTweanerFunction test];
+    //    [MMTweenFunction test];
 }
 
 + (void)test {
-    MMTweanerFunction *func = [MMTweanerFunction sharedInstance];
+    MMTweenFunction *func = [MMTweenFunction sharedInstance];
     
-    for (int i = 0; i < MMTweanerFunctionTypeMax; ++i) {
-        for (int j = 0; j < MMTweanerEasingTypeMax; ++j) {
+    for (int i = 0; i < MMTweenFunctionTypeMax; ++i) {
+        for (int j = 0; j < MMTweenEasingTypeMax; ++j) {
             NSLog(@"%@\t\t%@", func.functionNames[i], func.easingNames[j]);
         }
     }

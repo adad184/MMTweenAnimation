@@ -1,6 +1,6 @@
 //
 //  MMPaintView.m
-//  MMTweanerAnimation
+//  MMTweenAnimation
 //
 //  Created by Ralph Li on 4/5/15.
 //  Copyright (c) 2015 LJC. All rights reserved.
@@ -63,7 +63,7 @@
     bool closed = NO;
     float alpha = 1.0f;
     
-    int endIndex = (closed ? [pointsAsNSValues count] : [pointsAsNSValues count]-2);
+    int endIndex = (int)[pointsAsNSValues count]-2;
     
     UIBezierPath *path = [UIBezierPath bezierPath];
     int startIndex = (closed ? 0 : 1);
@@ -71,7 +71,7 @@
         CGPoint p0, p1, p2, p3;
         int nextii      = (ii+1)%[pointsAsNSValues count];
         int nextnextii  = (nextii+1)%[pointsAsNSValues count];
-        int previi      = (ii-1 < 0 ? [pointsAsNSValues count]-1 : ii-1);
+        int previi      = (ii-1 < 0 ? (int)[pointsAsNSValues count]-1 : ii-1);
         
         [pointsAsNSValues[ii] getValue:&p1];
         [pointsAsNSValues[previi] getValue:&p0];
@@ -108,7 +108,7 @@
     
     bool closed = NO;
     
-    int nCurves = (closed ? [pointsAsNSValues count] : [pointsAsNSValues count]-1);
+    int nCurves = (int)[pointsAsNSValues count]-1;
     
     UIBezierPath *path = [UIBezierPath bezierPath];
     for (int ii=0; ii < nCurves; ++ii) {
@@ -120,7 +120,7 @@
             [path moveToPoint:curPt];
         
         int nextii = (ii+1)%[pointsAsNSValues count];
-        int previi = (ii-1 < 0 ? [pointsAsNSValues count]-1 : ii-1);
+        int previi = (ii-1 < 0 ? (int)[pointsAsNSValues count]-1 : ii-1);
         
         [pointsAsNSValues[previi] getValue:&prevPt];
         [pointsAsNSValues[nextii] getValue:&nextPt];

@@ -1,6 +1,6 @@
 //
 //  MMFunctionController.m
-//  MMTweanerAnimation
+//  MMTweenAnimation
 //
 //  Created by Ralph Li on 4/4/15.
 //  Copyright (c) 2015 LJC. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "MMFunctionController.h"
 #import <Masonry/Masonry.h>
-#import "MMTweanerFunction.h"
+#import "MMTweenFunction.h"
 #import "MMAnimationController.h"
 
 @interface MMFunctionController ()
@@ -27,7 +27,7 @@ UITableViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"MMTweanerAnimation";
+    self.title = @"MMTweenAnimation";
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView = [UITableView new];
@@ -51,11 +51,11 @@ UITableViewDataSource
 #pragma mark - UITableView Datasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return MMTweanerFunctionTypeMax;
+    return MMTweenFunctionTypeMax;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return MMTweanerEasingTypeMax;
+    return MMTweenEasingTypeMax;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,7 +73,7 @@ UITableViewDataSource
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", [MMTweanerFunction sharedInstance].easingNames[indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", [MMTweenFunction sharedInstance].easingNames[indexPath.row]];
     
     return cell;
 }
@@ -93,7 +93,7 @@ UITableViewDataSource
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [MMTweanerFunction sharedInstance].functionNames[section];
+    return [MMTweenFunction sharedInstance].functionNames[section];
 }
 
 /*

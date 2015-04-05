@@ -1,17 +1,17 @@
 //
 //  MMAnimationController.h
-//  MMTweanerAnimation
+//  MMTweenAnimation
 //
 //  Created by Ralph Li on 4/4/15.
 //  Copyright (c) 2015 LJC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "MMTweanerAnimation.h"
+#import "MMTweenAnimation.h"
 
 @interface MMAnimationController : UIViewController
 
-@property (nonatomic, assign) MMTweanerFunctionType functionType;
-@property (nonatomic, assign) MMTweanerEasingType   easingType;
+@property (nonatomic, assign) MMTweenFunctionType functionType;
+@property (nonatomic, assign) MMTweenEasingType   easingType;
 
 @end

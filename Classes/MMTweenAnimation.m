@@ -1,26 +1,26 @@
 //
-//  MMTweanerAnimation.m
-//  MMTweanerAnimation
+//  MMTweenAnimation.m
+//  MMTweenAnimation
 //
 //  Created by Ralph Li on 4/4/15.
 //  Copyright (c) 2015 LJC. All rights reserved.
 //
 
-#import "MMTweanerAnimation.h"
+#import "MMTweenAnimation.h"
 
-@interface MMTweanerAnimation()
+@interface MMTweenAnimation()
 
-@property (nonatomic, copy) MMTweanerFunctionBlock functionBlock;
+@property (nonatomic, copy) MMTweenFunctionBlock functionBlock;
 
 @end
 
-@implementation MMTweanerAnimation
+@implementation MMTweenAnimation
 
 + (instancetype)animation
 {
-    MMTweanerAnimation *tweaner = [super animationWithBlock:^BOOL(id target, POPCustomAnimation *animation) {
+    MMTweenAnimation *tweaner = [super animationWithBlock:^BOOL(id target, POPCustomAnimation *animation) {
         
-        MMTweanerAnimation *anim = (MMTweanerAnimation*)animation;
+        MMTweenAnimation *anim = (MMTweenAnimation*)animation;
         
         double t = (animation.currentTime-animation.beginTime);
         double b = anim.fromValue;
@@ -43,8 +43,8 @@
         }
     }];
     tweaner.duration = 0.3;
-    tweaner.functionType = MMTweanerFunctionBounce;
-    tweaner.easingType   = MMTweanerEasingOut;
+    tweaner.functionType = MMTweenFunctionBounce;
+    tweaner.easingType   = MMTweenEasingOut;
     
     return tweaner;
 }
@@ -54,20 +54,20 @@
     return nil;
 }
 
-- (void)setFunctionType:(MMTweanerFunctionType)functionType
+- (void)setFunctionType:(MMTweenFunctionType)functionType
 {
     _functionType = functionType;
     
-    MMTweanerFunction *function = [MMTweanerFunction sharedInstance];
+    MMTweenFunction *function = [MMTweenFunction sharedInstance];
     
     self.functionBlock = function.functionTable[functionType][self.easingType];
 }
 
-- (void)setEasingType:(MMTweanerEasingType)easingType
+- (void)setEasingType:(MMTweenEasingType)easingType
 {
     _easingType = easingType;
     
-    MMTweanerFunction *function = [MMTweanerFunction sharedInstance];
+    MMTweenFunction *function = [MMTweenFunction sharedInstance];
     
     self.functionBlock = function.functionTable[self.functionType][easingType];
 }
