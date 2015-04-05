@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MMTweenAnimation.h"
+#import <MMTweenAnimation/MMTweenFunction.h>
 
 @interface MMAnimationController : UIViewController
 

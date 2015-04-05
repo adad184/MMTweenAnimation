@@ -10,11 +10,8 @@
 		C561E99167E6AC4A80AA55E3 /* libPods-MMTweenAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 229873FC63E85087426051E7 /* libPods-MMTweenAnimation.a */; };
 		EDB8A10F1AD1964B00498154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A10E1AD1964B00498154 /* main.m */; };
 		EDB8A1121AD1964B00498154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1111AD1964B00498154 /* AppDelegate.m */; };
-		EDB8A1151AD1964B00498154 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1141AD1964B00498154 /* ViewController.m */; };
 		EDB8A11A1AD1964B00498154 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB8A1191AD1964B00498154 /* Images.xcassets */; };
 		EDB8A1291AD1964B00498154 /* MMTweenAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1281AD1964B00498154 /* MMTweenAnimationTests.m */; };
-		EDB8A1371AD1992900498154 /* MMTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1341AD1992900498154 /* MMTweenAnimation.m */; };
-		EDB8A1381AD1992900498154 /* MMTweenFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1361AD1992900498154 /* MMTweenFunction.m */; };
 		EDB8A1411AD1993B00498154 /* CGPointExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A13A1AD1993B00498154 /* CGPointExtension.m */; };
 		EDB8A1421AD1993B00498154 /* MMAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A13C1AD1993B00498154 /* MMAnimationController.m */; };
 		EDB8A1431AD1993B00498154 /* MMFunctionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A13E1AD1993B00498154 /* MMFunctionController.m */; };
@@ -40,16 +37,10 @@
 		EDB8A10E1AD1964B00498154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDB8A1101AD1964B00498154 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDB8A1111AD1964B00498154 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EDB8A1131AD1964B00498154 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EDB8A1141AD1964B00498154 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EDB8A1191AD1964B00498154 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EDB8A1221AD1964B00498154 /* MMTweenAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMTweenAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB8A1271AD1964B00498154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB8A1281AD1964B00498154 /* MMTweenAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTweenAnimationTests.m; sourceTree = "<group>"; };
-		EDB8A1331AD1992900498154 /* MMTweenAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTweenAnimation.h; path = ../Classes/MMTweenAnimation.h; sourceTree = "<group>"; };
-		EDB8A1341AD1992900498154 /* MMTweenAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTweenAnimation.m; path = ../Classes/MMTweenAnimation.m; sourceTree = "<group>"; };
-		EDB8A1351AD1992900498154 /* MMTweenFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTweenFunction.h; path = ../Classes/MMTweenFunction.h; sourceTree = "<group>"; };
-		EDB8A1361AD1992900498154 /* MMTweenFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTweenFunction.m; path = ../Classes/MMTweenFunction.m; sourceTree = "<group>"; };
 		EDB8A1391AD1993B00498154 /* CGPointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointExtension.h; sourceTree = "<group>"; };
 		EDB8A13A1AD1993B00498154 /* CGPointExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointExtension.m; sourceTree = "<group>"; };
 		EDB8A13B1AD1993B00498154 /* MMAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAnimationController.h; sourceTree = "<group>"; };
@@ -91,7 +82,6 @@
 		EDB8A1001AD1964B00498154 = {
 			isa = PBXGroup;
 			children = (
-				EDB8A1321AD1991500498154 /* Classes */,
 				EDB8A10B1AD1964B00498154 /* MMTweenAnimation */,
 				EDB8A1251AD1964B00498154 /* MMTweenAnimationTests */,
 				EDB8A10A1AD1964B00498154 /* Products */,
@@ -122,8 +112,6 @@
 				EDB8A1401AD1993B00498154 /* MMPaintView.m */,
 				EDB8A1101AD1964B00498154 /* AppDelegate.h */,
 				EDB8A1111AD1964B00498154 /* AppDelegate.m */,
-				EDB8A1131AD1964B00498154 /* ViewController.h */,
-				EDB8A1141AD1964B00498154 /* ViewController.m */,
 				EDB8A1191AD1964B00498154 /* Images.xcassets */,
 				EDB8A10C1AD1964B00498154 /* Supporting Files */,
 			);
@@ -154,17 +142,6 @@
 				EDB8A1271AD1964B00498154 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EDB8A1321AD1991500498154 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				EDB8A1331AD1992900498154 /* MMTweenAnimation.h */,
-				EDB8A1341AD1992900498154 /* MMTweenAnimation.m */,
-				EDB8A1351AD1992900498154 /* MMTweenFunction.h */,
-				EDB8A1361AD1992900498154 /* MMTweenFunction.m */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		FBBC2A3FAE6A3572EE315858 /* Frameworks */ = {
@@ -310,13 +287,10 @@
 			files = (
 				EDB8A1441AD1993B00498154 /* MMPaintView.m in Sources */,
 				EDB8A1411AD1993B00498154 /* CGPointExtension.m in Sources */,
-				EDB8A1151AD1964B00498154 /* ViewController.m in Sources */,
 				EDB8A1421AD1993B00498154 /* MMAnimationController.m in Sources */,
 				EDB8A1121AD1964B00498154 /* AppDelegate.m in Sources */,
 				EDB8A10F1AD1964B00498154 /* main.m in Sources */,
 				EDB8A1431AD1993B00498154 /* MMFunctionController.m in Sources */,
-				EDB8A1381AD1992900498154 /* MMTweenFunction.m in Sources */,
-				EDB8A1371AD1992900498154 /* MMTweenAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

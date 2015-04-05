@@ -5,6 +5,7 @@ target 'MMTweenAnimation' do
 
 pod 'pop', :head
 pod 'Masonry', :head
+pod 'MMTweenAnimation', :head
 
 end
 

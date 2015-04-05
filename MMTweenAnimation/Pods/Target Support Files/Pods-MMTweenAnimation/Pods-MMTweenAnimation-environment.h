@@ -6,6 +6,12 @@
 // project.
 
 
+// MMTweenAnimation
+#define COCOAPODS_POD_AVAILABLE_MMTweenAnimation
+#define COCOAPODS_VERSION_MAJOR_MMTweenAnimation 1
+#define COCOAPODS_VERSION_MINOR_MMTweenAnimation 0
+#define COCOAPODS_VERSION_PATCH_MMTweenAnimation 0
+
 // Masonry
 #define COCOAPODS_POD_AVAILABLE_Masonry
 #define COCOAPODS_VERSION_MAJOR_Masonry 0

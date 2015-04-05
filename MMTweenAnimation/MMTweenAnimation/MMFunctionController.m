@@ -8,7 +8,7 @@
 
 #import "MMFunctionController.h"
 #import <Masonry/Masonry.h>
-#import "MMTweenFunction.h"
+#import <MMTweenAnimation/MMTweenFunction.h>
 #import "MMAnimationController.h"
 
 @interface MMFunctionController ()

@@ -9,7 +9,7 @@
 #import "MMAnimationController.h"
 #import "MMPaintView.h"
 #import <Masonry/Masonry.h>
-#import "MMTweenAnimation.h"
+#import <MMTweenAnimation/MMTweenAnimation.h>
 
 @interface MMAnimationController ()
 
