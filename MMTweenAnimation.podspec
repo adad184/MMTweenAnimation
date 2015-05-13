@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MMTweenAnimation"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "A extension of POP(from facebook) Animation"
 
   s.description  = <<-DESC
