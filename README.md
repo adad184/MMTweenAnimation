@@ -51,8 +51,8 @@ To apply a MMTweenAnimation, you must configure it by:
 ```objc
 @property (nonatomic, copy)   MMTweenAnimationBlock  animationBlock;
 
-@property (nonatomic, assign) double fromValue;
-@property (nonatomic, assign) double toValue;
+@property (nonatomic, assign) NSArray *fromValue;
+@property (nonatomic, assign) NSArray *toValue;
 @property (nonatomic, assign) double duration;  //default: 0.3
 
 @property (nonatomic, assign) MMTweenFunctionType functionType; //default: MMTweenFunctionBounce
@@ -65,16 +65,17 @@ MMTweenAnimation *anim = [MMTweenAnimation animation];
 anim.functionType   = MMTweenFunctionBounce;
 anim.easingType     = MMTweenEasingOut;
 anim.duration       = 2.0f;
-anim.fromValue      = 0;
-anim.toValue        = 200;
-anim.animationBlock = ^(double c,double d,double v,id target,MMTweenAnimation *animation)
+anim.fromValue      = @[@0];
+anim.toValue        = @[@200];
+anim.animationBlock = ^(double c,double d,NSArray *v,id target,MMTweenAnimation *animation)
 {
     //c: current time, from the beginning of animation
     //d: duration, always bigger than c
     //v: value, after the change at current time
 
+    double value = [v[0] doubleValue];
     UIView *t = (UIView*)target;
-    t.center = CGPointMake(t.x, v);
+    t.center = CGPointMake(t.x, value);
 };
 
 [targetView pop_addAnimation:anim forKey:@"center.y"];
@@ -83,6 +84,19 @@ anim.animationBlock = ^(double c,double d,double v,id target,MMTweenAnimation *a
 
 Changelog
 ===============
+
+v1.1  you can animate several values at the same time
+
+typedef void(^MMTweenAnimationBlock)(double c,   
+                                     double d,  
+                                     NSArray *v, // change to array
+                                     id target,
+                                     MMTweenAnimation *animation
+                                     );
+
+@property (nonatomic, strong) NSArray *fromValue;	// change to array
+@property (nonatomic, strong) NSArray *toValue;		// change to array
+
 v1.0  you can custom or simply use it by
 
 ```objc
