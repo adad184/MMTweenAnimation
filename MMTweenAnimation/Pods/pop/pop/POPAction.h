@@ -11,7 +11,6 @@
 #define POPACTION_H
 
 #import <QuartzCore/CATransaction.h>
-
 #import <pop/POPDefines.h>
 
 #ifdef __cplusplus

@@ -8,9 +8,8 @@
  */
 
 #import "POPMath.h"
-
-#import "POPAnimationPrivate.h"
 #import "UnitBezier.h"
+#import "POPAnimationPrivate.h"
 
 void POPInterpolateVector(NSUInteger count, CGFloat *dst, const CGFloat *from, const CGFloat *to, CGFloat f)
 {

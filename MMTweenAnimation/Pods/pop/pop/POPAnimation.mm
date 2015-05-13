@@ -7,15 +7,15 @@
  of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import "POPAnimationExtras.h"
 #import "POPAnimationInternal.h"
+#import "POPAnimationTracerInternal.h"
 
 #import <objc/runtime.h>
 
-#import "POPAction.h"
+#import "POPAnimationExtras.h"
 #import "POPAnimationRuntime.h"
-#import "POPAnimationTracerInternal.h"
 #import "POPAnimatorPrivate.h"
+#import "POPAction.h"
 
 using namespace POP;
 
@@ -118,10 +118,7 @@ using namespace POP;
 }
 
 FB_PROPERTY_GET(POPAnimationState, type, POPAnimationType);
-DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, animationDidStartBlock, setAnimationDidStartBlock:, POPAnimationDidStartBlock);
-DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, animationDidReachToValueBlock, setAnimationDidReachToValueBlock:, POPAnimationDidReachToValueBlock);
 DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, completionBlock, setCompletionBlock:, POPAnimationCompletionBlock);
-DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, animationDidApplyBlock, setAnimationDidApplyBlock:, POPAnimationDidApplyBlock);
 DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, name, setName:, NSString*);
 DEFINE_RW_PROPERTY(POPAnimationState, beginTime, setBeginTime:, CFTimeInterval);
 DEFINE_RW_FLAG(POPAnimationState, removedOnCompletion, removedOnCompletion, setRemovedOnCompletion:);

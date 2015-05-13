@@ -8,7 +8,6 @@
  */
 
 #import "POPBasicAnimation.h"
-
 #import "POPPropertyAnimationInternal.h"
 
 // default animation duration

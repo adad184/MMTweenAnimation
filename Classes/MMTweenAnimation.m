@@ -23,13 +23,28 @@
         MMTweenAnimation *anim = (MMTweenAnimation*)animation;
         
         double t = (animation.currentTime-animation.beginTime);
-        double b = anim.fromValue;
-        double c = anim.toValue-anim.fromValue;
         double d = anim.duration;
+        
+        NSLog(@"%@",NSStringFromClass(anim.fromValue.class));
+        NSLog(@"%@",NSStringFromClass(anim.toValue.class));
+        
+        NSAssert(anim.fromValue.count==anim.toValue.count, @"fromValue.count != toValue.count");
         
         if ( t<d )
         {
-            double value = anim.functionBlock(t,b,c,d);
+            NSMutableArray *value = [@[] mutableCopy];
+            
+            
+            for ( int i = 0 ; i < anim.fromValue.count ; ++i )
+            {
+                NSNumber *from = anim.fromValue[i];
+                NSNumber *to = anim.toValue[i];
+                
+                double b = from.doubleValue;
+                double c = to.doubleValue-from.doubleValue;
+                
+                [value addObject:@(anim.functionBlock(t,b,c,d))];
+            }
             
             if ( anim.animationBlock )
             {

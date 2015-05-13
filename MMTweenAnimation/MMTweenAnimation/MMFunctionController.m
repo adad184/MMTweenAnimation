@@ -7,8 +7,7 @@
 //
 
 #import "MMFunctionController.h"
-#import <Masonry/Masonry.h>
-#import <MMTweenAnimation/MMTweenFunction.h>
+#import "MMTweenAnimation.h"
 #import "MMAnimationController.h"
 
 @interface MMFunctionController ()
@@ -30,15 +29,10 @@ UITableViewDataSource
     self.title = @"MMTweenAnimation";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.tableView = [UITableView new];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    
     
     // Do any additional setup after loading the view.
 }

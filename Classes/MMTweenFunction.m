@@ -173,7 +173,7 @@ static MMTweenFunction *sharedFunction = nil;
         if (!p) {
             p = d * .3;
         }
-        if (a < abs(c)) {
+        if (a < fabs(c)) {
             a = c; s = p / 4;
         }
         else {
@@ -197,7 +197,7 @@ static MMTweenFunction *sharedFunction = nil;
         if (!p) {
             p = d * .3;
         }
-        if (a < abs(c)) {
+        if (a < fabs(c)) {
             a = c; s = p / 4;
         }
         else {
@@ -220,7 +220,7 @@ static MMTweenFunction *sharedFunction = nil;
         if (!p) {
             p = d * (.3 * 1.5);
         }
-        if (a < abs(c)) {
+        if (a < fabs(c)) {
             a = c; s = p / 4;
         }
         else {

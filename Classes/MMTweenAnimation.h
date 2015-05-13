@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 LJC. All rights reserved.
 //
 
-#import "POPCustomAnimation.h"
+#import <pop/POP.h>
 #import "MMTweenFunction.h"
 
 @class MMTweenAnimation;
 
-typedef void(^MMTweenAnimationBlock)(double c, //current time offset(0->duration)
-                                     double d, //duration
-                                     double v, //return value
+typedef void(^MMTweenAnimationBlock)(double c,   //current time offset(0->duration)
+                                     double d,   //duration
+                                     NSArray *v, //current value
                                      id target,
                                      MMTweenAnimation *animation
                                      );
@@ -22,9 +22,9 @@ typedef void(^MMTweenAnimationBlock)(double c, //current time offset(0->duration
 
 @property (nonatomic, copy)   MMTweenAnimationBlock  animationBlock;
 
-@property (nonatomic, assign) double fromValue;
-@property (nonatomic, assign) double toValue;
-@property (nonatomic, assign) double duration;
+@property (nonatomic, strong) NSArray *fromValue;
+@property (nonatomic, strong) NSArray *toValue;
+@property (nonatomic, assign) double  duration;
 
 @property (nonatomic, assign) MMTweenFunctionType functionType;
 @property (nonatomic, assign) MMTweenEasingType   easingType;

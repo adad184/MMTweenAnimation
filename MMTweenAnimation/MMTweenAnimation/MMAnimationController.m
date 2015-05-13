@@ -8,8 +8,7 @@
 
 #import "MMAnimationController.h"
 #import "MMPaintView.h"
-#import <Masonry/Masonry.h>
-#import <MMTweenAnimation/MMTweenAnimation.h>
+#import "MMTweenAnimation.h"
 
 @interface MMAnimationController ()
 
@@ -29,11 +28,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.paintView = [[MMPaintView alloc] initWithFrame:CGRectZero];
+    self.paintView = [[MMPaintView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.paintView];
-    [self.paintView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
     self.paintView.backgroundColor = [UIColor whiteColor];
     
     self.dummy = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
@@ -63,12 +59,13 @@
     self.anim.functionType   = self.functionType;
     self.anim.easingType     = self.easingType;
     self.anim.duration       = 2.0f;
-    self.anim.fromValue      = self.dummy.center.y;
-    self.anim.toValue        = self.anim.fromValue + 200;
-    self.anim.animationBlock = ^(double c,double d,double v,id target,MMTweenAnimation *animation)
+    self.anim.fromValue      = @[@(self.dummy.center.y)];
+    self.anim.toValue        = @[@(self.dummy.center.y  + 200)];
+    self.anim.animationBlock = ^(double c,double d,NSArray *v,id target,MMTweenAnimation *animation)
     {
-        ws.dummy.center = CGPointMake(ws.dummy.center.x, v);
-        ws.ball.center = CGPointMake(50+(CGRectGetWidth([UIScreen mainScreen].bounds)-150)*(c/d), v);
+        double value = [v[0] doubleValue];
+        ws.dummy.center = CGPointMake(ws.dummy.center.x, value);
+        ws.ball.center = CGPointMake(50+(CGRectGetWidth([UIScreen mainScreen].bounds)-150)*(c/d), value);
         
         [ws.paintView addDot:ws.ball.center];
     };

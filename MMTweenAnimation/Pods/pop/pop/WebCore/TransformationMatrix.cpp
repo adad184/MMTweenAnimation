@@ -25,10 +25,8 @@
  */
 
 #include "TransformationMatrix.h"
-
-#include <math.h>
-
 #include "FloatConversion.h"
+#include <math.h>
 
 inline double deg2rad(double d)  { return d * M_PI / 180.0; }
 inline double rad2deg(double r)  { return r * 180.0 / M_PI; }

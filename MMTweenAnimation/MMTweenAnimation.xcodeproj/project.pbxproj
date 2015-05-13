@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C561E99167E6AC4A80AA55E3 /* libPods-MMTweenAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 229873FC63E85087426051E7 /* libPods-MMTweenAnimation.a */; };
+		ED74E2F41B02F2C2009E842E /* MMTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74E2F11B02F2C2009E842E /* MMTweenAnimation.m */; };
+		ED74E2F51B02F2C2009E842E /* MMTweenFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = ED74E2F31B02F2C2009E842E /* MMTweenFunction.m */; };
 		EDB8A10F1AD1964B00498154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A10E1AD1964B00498154 /* main.m */; };
 		EDB8A1121AD1964B00498154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1111AD1964B00498154 /* AppDelegate.m */; };
 		EDB8A11A1AD1964B00498154 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB8A1191AD1964B00498154 /* Images.xcassets */; };
@@ -16,6 +17,7 @@
 		EDB8A1421AD1993B00498154 /* MMAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A13C1AD1993B00498154 /* MMAnimationController.m */; };
 		EDB8A1431AD1993B00498154 /* MMFunctionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A13E1AD1993B00498154 /* MMFunctionController.m */; };
 		EDB8A1441AD1993B00498154 /* MMPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB8A1401AD1993B00498154 /* MMPaintView.m */; };
+		F25B3B0B43730BD23576A072 /* libPods-MMTweenAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 229873FC63E85087426051E7 /* libPods-MMTweenAnimation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,9 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13BE191EBA2126F0F0C269D3 /* Pods-MMTweenAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTweenAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMTweenAnimation/Pods-MMTweenAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 		229873FC63E85087426051E7 /* libPods-MMTweenAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMTweenAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4121E87E4BD7A021719BCCD4 /* Pods-MMTweenAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTweenAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMTweenAnimation/Pods-MMTweenAnimation.debug.xcconfig"; sourceTree = "<group>"; };
-		7ACB5604A779BD7C901DBCDC /* Pods-MMTweenAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTweenAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMTweenAnimation/Pods-MMTweenAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		C8DA4EF0306A7107D881DB26 /* Pods-MMTweenAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTweenAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMTweenAnimation/Pods-MMTweenAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		ED74E2F01B02F2C2009E842E /* MMTweenAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTweenAnimation.h; sourceTree = "<group>"; };
+		ED74E2F11B02F2C2009E842E /* MMTweenAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTweenAnimation.m; sourceTree = "<group>"; };
+		ED74E2F21B02F2C2009E842E /* MMTweenFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTweenFunction.h; sourceTree = "<group>"; };
+		ED74E2F31B02F2C2009E842E /* MMTweenFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTweenFunction.m; sourceTree = "<group>"; };
 		EDB8A1091AD1964B00498154 /* MMTweenAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMTweenAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB8A10D1AD1964B00498154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDB8A10E1AD1964B00498154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C561E99167E6AC4A80AA55E3 /* libPods-MMTweenAnimation.a in Frameworks */,
+				F25B3B0B43730BD23576A072 /* libPods-MMTweenAnimation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,23 +76,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06EF24AE774DAABB7482967C /* Pods */ = {
+		0D65282576367039D87CBCF6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4121E87E4BD7A021719BCCD4 /* Pods-MMTweenAnimation.debug.xcconfig */,
-				7ACB5604A779BD7C901DBCDC /* Pods-MMTweenAnimation.release.xcconfig */,
+				13BE191EBA2126F0F0C269D3 /* Pods-MMTweenAnimation.debug.xcconfig */,
+				C8DA4EF0306A7107D881DB26 /* Pods-MMTweenAnimation.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED74E2EF1B02F2C2009E842E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ED74E2F01B02F2C2009E842E /* MMTweenAnimation.h */,
+				ED74E2F11B02F2C2009E842E /* MMTweenAnimation.m */,
+				ED74E2F21B02F2C2009E842E /* MMTweenFunction.h */,
+				ED74E2F31B02F2C2009E842E /* MMTweenFunction.m */,
+			);
+			name = Classes;
+			path = ../../mmtweenanimation/Classes;
 			sourceTree = "<group>";
 		};
 		EDB8A1001AD1964B00498154 = {
 			isa = PBXGroup;
 			children = (
+				ED74E2EF1B02F2C2009E842E /* Classes */,
 				EDB8A10B1AD1964B00498154 /* MMTweenAnimation */,
 				EDB8A1251AD1964B00498154 /* MMTweenAnimationTests */,
 				EDB8A10A1AD1964B00498154 /* Products */,
-				06EF24AE774DAABB7482967C /* Pods */,
 				FBBC2A3FAE6A3572EE315858 /* Frameworks */,
+				0D65282576367039D87CBCF6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,11 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDB8A12C1AD1964B00498154 /* Build configuration list for PBXNativeTarget "MMTweenAnimation" */;
 			buildPhases = (
-				5976C6836A69826B3F56A634 /* Check Pods Manifest.lock */,
+				2E771F991A2500903F1FAC2B /* Check Pods Manifest.lock */,
 				EDB8A1051AD1964B00498154 /* Sources */,
 				EDB8A1061AD1964B00498154 /* Frameworks */,
 				EDB8A1071AD1964B00498154 /* Resources */,
-				EA7F0C6B7E730CDD3C979C7D /* Copy Pods Resources */,
+				7C35B64308190C3EE867CE35 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +267,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5976C6836A69826B3F56A634 /* Check Pods Manifest.lock */ = {
+		2E771F991A2500903F1FAC2B /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,7 +282,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EA7F0C6B7E730CDD3C979C7D /* Copy Pods Resources */ = {
+		7C35B64308190C3EE867CE35 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,7 +309,9 @@
 				EDB8A1421AD1993B00498154 /* MMAnimationController.m in Sources */,
 				EDB8A1121AD1964B00498154 /* AppDelegate.m in Sources */,
 				EDB8A10F1AD1964B00498154 /* main.m in Sources */,
+				ED74E2F41B02F2C2009E842E /* MMTweenAnimation.m in Sources */,
 				EDB8A1431AD1993B00498154 /* MMFunctionController.m in Sources */,
+				ED74E2F51B02F2C2009E842E /* MMTweenFunction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +414,7 @@
 		};
 		EDB8A12D1AD1964B00498154 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4121E87E4BD7A021719BCCD4 /* Pods-MMTweenAnimation.debug.xcconfig */;
+			baseConfigurationReference = 13BE191EBA2126F0F0C269D3 /* Pods-MMTweenAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MMTweenAnimation/Info.plist;
@@ -404,7 +425,7 @@
 		};
 		EDB8A12E1AD1964B00498154 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7ACB5604A779BD7C901DBCDC /* Pods-MMTweenAnimation.release.xcconfig */;
+			baseConfigurationReference = C8DA4EF0306A7107D881DB26 /* Pods-MMTweenAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MMTweenAnimation/Info.plist;
