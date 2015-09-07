@@ -1,7 +1,9 @@
 MMTweenAnimation
 =============
-[![Total views](https://sourcegraph.com/api/repos/github.com/adad184/MMTweenAnimation/.counters/views.png)](https://sourcegraph.com/github.com/adad184/MMTweenAnimation)
-[![Views in the last 24 hours](https://sourcegraph.com/api/repos/github.com/adad184/MMTweenAnimation/.counters/views-24h.png)](https://sourcegraph.com/github.com/adad184/MMTweenAnimation)
+[![CocoaPods](https://img.shields.io/cocoapods/v/MMTweenAnimation.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/p/MMTweenAnimation.svg)]()
+[![CocoaPods](https://img.shields.io/cocoapods/l/MMTweenAnimation.svg)]()
+
 
 ![demo][demo]
 
